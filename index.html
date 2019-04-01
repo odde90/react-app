@@ -4,8 +4,15 @@
         <meta charset="UTF-8" />
         <title>Hello React!</title>
     </head>
+    <style>
+    html, body, body > div{
+        height: 100%;
+        margin: 0;
+        font-family: verdana, geneva, Thoma, sans-serif;
+    }
+    </style>
     <body>
-        <div id="example"></div>
+        <div id="root"></div>
 
         <!-- Dependencies -->
         <script src="./node_modules/react/umd/react.development.js"></script>

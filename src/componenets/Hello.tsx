@@ -1,11 +1,28 @@
-import * as React from "react";
+import React, { CSSProperties } from "react";
 
-export interface HelloProps { compiler: string; framework: string; }
-
-// 'HelloProps' describes the shape of props.
-// State is never set so we use the '{}' type.
-export class Hello extends React.Component<HelloProps, {}> {
-    render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
-    }
+interface Props {
+    compiler: string;
+    framework:string;
 }
+
+export default function Hello(props: Props){
+    return (
+        
+        <h1 style={centeredContenet}>Hello from {props.compiler} and {props.framework}</h1>
+        
+    );
+}
+
+export const centeredContenet: CSSProperties = {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    margin: 0,
+    background: 'black',
+    color: 'white'
+};
+
